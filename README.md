@@ -8,3 +8,14 @@ Work in progress. Its API might change before the 1.0 release.
 This package intends to define simple interfaces that Go code checkers
 can implement. This would simplify calling them from Go code, as well as
 running multiple linters while sharing initial loading work.
+
+### metalint
+
+	go get -u github.com/mvdan/lint/cmd/metalint
+
+The start of a linter that runs many linters leveraging the common
+interface. Not stable yet.
+
+Linters included:
+
+* [unparam](https://github.com/mvdan/unparam)
