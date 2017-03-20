@@ -1,6 +1,7 @@
 // Copyright (c) 2017, Daniel Martí <mvdan@mvdan.cc>
 // See LICENSE for licensing information
 
+// Package lint defines common interfaces for Go code checkers.
 package lint
 
 import (
