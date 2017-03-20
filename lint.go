@@ -13,11 +13,11 @@ import (
 
 // A Checker points out issues in a program.
 type Checker interface {
-	Check(*loader.Program, *ssa.Program) ([]Warning, error)
+	Check(*loader.Program, *ssa.Program) ([]Issue, error)
 }
 
-// Warning represents an issue somewhere in a source code file.
-type Warning struct {
+// Issue represents an issue somewhere in a source code file.
+type Issue struct {
 	Pos token.Pos
 	Msg string
 }
