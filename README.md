@@ -1,5 +1,6 @@
 # lint
 
+[![GoDoc](https://godoc.org/github.com/mvdan/lint?status.svg)](https://godoc.org/github.com/mvdan/lint)
 [![Build Status](https://travis-ci.org/mvdan/lint.svg?branch=master)](https://travis-ci.org/mvdan/lint)
 
 Work in progress. Its API might change before the 1.0 release.
