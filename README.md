@@ -19,3 +19,4 @@ interface. Not stable yet.
 Linters included:
 
 * [unparam](https://github.com/mvdan/unparam)
+* [interfacer](https://github.com/mvdan/interfacer)

@@ -17,6 +17,7 @@ import (
 
 	"github.com/kisielk/gotool"
 
+	"github.com/mvdan/interfacer"
 	unparam "github.com/mvdan/unparam/check"
 )
 
@@ -35,6 +36,7 @@ var linters = [...]struct {
 	checker lint.Checker
 }{
 	{"unparam", &unparam.Checker{}},
+	{"interfacer", &interfacer.Checker{}},
 }
 
 type metaChecker struct {
