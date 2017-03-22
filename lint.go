@@ -17,7 +17,7 @@ type Checker interface {
 }
 
 // Issue represents an issue somewhere in a source code file.
-type Issue struct {
-	Pos token.Pos
-	Msg string
+type Issue interface {
+	Pos() token.Pos
+	Message() string
 }

@@ -74,10 +74,10 @@ func runLinters(args ...string) error {
 
 func (c *metaChecker) printIssues(name string, issues []lint.Issue) {
 	for _, issue := range issues {
-		fpos := c.lprog.Fset.Position(issue.Pos).String()
+		fpos := c.lprog.Fset.Position(issue.Pos()).String()
 		if strings.HasPrefix(fpos, c.wd) {
 			fpos = fpos[len(c.wd)+1:]
 		}
-		fmt.Printf("%s: %s (%s)\n", fpos, issue.Msg, name)
+		fmt.Printf("%s: %s (%s)\n", fpos, issue.Message(), name)
 	}
 }
