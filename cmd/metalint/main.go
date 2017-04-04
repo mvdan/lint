@@ -60,10 +60,16 @@ func runLinters(args ...string) error {
 	if c.lprog, err = conf.Load(); err != nil {
 		return err
 	}
-	c.prog = ssautil.CreateProgram(c.lprog, 0)
-	c.prog.Build()
 	for _, l := range linters {
-		issues, err := l.checker.Check(c.lprog, c.prog)
+		l.checker.Program(c.lprog)
+		if ssaChecker, ok := l.checker.(lint.WithSSA); ok {
+			if c.prog == nil {
+				c.prog = ssautil.CreateProgram(c.lprog, 0)
+				c.prog.Build()
+			}
+			ssaChecker.ProgramSSA(c.prog)
+		}
+		issues, err := l.checker.Check()
 		if err != nil {
 			return err
 		}
