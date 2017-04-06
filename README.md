@@ -20,3 +20,8 @@ Linters included:
 
 * [unparam](https://github.com/mvdan/unparam)
 * [interfacer](https://github.com/mvdan/interfacer)
+
+### Related projects
+
+* [golinters](https://github.com/thomasheller/golinters) - Report on
+  linter support
