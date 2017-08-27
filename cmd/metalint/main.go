@@ -18,7 +18,7 @@ import (
 	"github.com/kisielk/gotool"
 
 	"github.com/mvdan/interfacer"
-	unparam "github.com/mvdan/unparam/check"
+	unparam "mvdan.cc/unparam/check"
 )
 
 var tests = flag.Bool("tests", false, "include tests")
