@@ -1,7 +1,7 @@
 // Copyright (c) 2017, Daniel Martí <mvdan@mvdan.cc>
 // See LICENSE for licensing information
 
-package main
+package main // import "mvdan.cc/lint/cmd/metalint"
 
 import (
 	"flag"
@@ -13,7 +13,7 @@ import (
 	"golang.org/x/tools/go/ssa"
 	"golang.org/x/tools/go/ssa/ssautil"
 
-	"github.com/mvdan/lint"
+	"mvdan.cc/lint"
 
 	"github.com/kisielk/gotool"
 
