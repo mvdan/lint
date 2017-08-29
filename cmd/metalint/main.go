@@ -17,7 +17,7 @@ import (
 
 	"github.com/kisielk/gotool"
 
-	"github.com/mvdan/interfacer"
+	interfacer "mvdan.cc/interfacer/check"
 	unparam "mvdan.cc/unparam/check"
 )
 
